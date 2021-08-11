@@ -1,0 +1,32 @@
+{
+    "name": "mango-deals-server",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "tsc",
+        "compile": "tsc && kill-port 3000 && node ./dist/index.js",
+        "start": "./node_modules/nodemon/bin/nodemon.js -e ts  --exec \"npm run compile\"",
+        "start-prod": "node ./dist/index.js",
+        "deploy": "git push heroku main"
+    },
+    "keywords": [],
+    "author": "Vasilyev Maksim",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-async-handler": "^1.1.4"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.10",
+        "@types/express": "^4.17.11",
+        "@types/node": "latest",
+        "@typescript-eslint/eslint-plugin": "^4.18.0",
+        "@typescript-eslint/parser": "^4.18.0",
+        "eslint": "^7.22.0",
+        "kill-port": "^1.6.1",
+        "nodemon": "^2.0.7",
+        "ts-node": "latest",
+        "typescript": "latest"
+    }
+}

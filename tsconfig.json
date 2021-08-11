@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "baseUrl": "./src",
+        "experimentalDecorators": true,
+        "sourceMap": false,
+        "module": "CommonJS",
+        "target": "ES5",
+        "resolveJsonModule": true,
+        "allowUnreachableCode": false,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "strict": true,
+        "esModuleInterop": false
+    },
+}
