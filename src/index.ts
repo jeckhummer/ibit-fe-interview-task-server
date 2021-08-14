@@ -6,7 +6,7 @@ import * as db from "./db";
 import { getRandomDealsSet } from "./randomizer";
 import { delay } from "./utils";
 
-const PAGE_SIZE = 2;
+const PAGE_SIZE = 10;
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || "development";
@@ -20,10 +20,10 @@ app.use(cors({
 		: 'https://mango-deals.netlify.app'
 }));
 
-db.populate(getRandomDealsSet());
+db.populate(getRandomDealsSet(40));
 
 app.get("/deals", asyncHandler(async (req, res) => {
-	await delay(2000);
+	await delay(1000);
 
 	const page = parseInt(req.query.page?.toString() ?? '0') || 0;
 	const data = db.read(page, PAGE_SIZE);
